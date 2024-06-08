@@ -69,7 +69,7 @@ variable "tags" {
 
 # talos module
 variable "talos_version" {
-  default     = "v1.7.1"
+  default     = "v1.7.4"
   type        = string
   description = "Talos version to use for the cluster, if not set the newest Talos version. Check https://github.com/siderolabs/talos/releases for available releases."
 }
