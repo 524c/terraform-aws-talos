@@ -72,6 +72,11 @@ kubectl get nodes
 # Working with talosctl
 TALOSCONFIG=$(terraform output --raw path_to_talosconfig_file)
 talosctl config node $(terraform output --raw elb_dns_name)
+
+# Alternatively, you can use the talosctl kubeconfig command to merge the kubeconfig file into your local kubeconfig:
+talosctl config merge $(terraform output path_to_kubeconfig_file)
+talosctl kubeconfig
+
 talosctl version
 talosctl health
 talosctl service
