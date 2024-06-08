@@ -15,7 +15,7 @@ module "talos" {
   # For single-node cluster support:
   #allow_workload_on_cp_nodes = true
   #controlplane_count         = 1
-  #workers_count              = 0
+  workers_count              = 2
   // VPC needs to be created in advance via https://github.com/isovalent/terraform-aws-vpc
   vpc_id       = module.vpc.id
   pod_cidr     = var.pod_cidr
